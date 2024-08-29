@@ -9,8 +9,9 @@ const Home = () => {
 
   return (
     <>
-      <Carrosel itens={itens} />
-      <ComprasCard produtos={produtos}></ComprasCard>
+      function Home() {
+  return <h2>Home Page</h2>;
+}
     </>
   );
 };
