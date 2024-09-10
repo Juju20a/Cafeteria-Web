@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       function Home() {
-  return <h2>Home Page</h2>;
+      <h2>Home Page</h2>
 }
     </>
   );
