@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { CreateBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './templates/Layout';
 import Home from './views/Home';
 import NoPage from './views/NoPage';
@@ -8,7 +8,7 @@ import Login from './views/Login';
 
 function App() {
   return (
-    <BrowserRouter>
+    <CreateBrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -17,7 +17,7 @@ function App() {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </CreateBrowserRouter>
   );
 }
 
