@@ -1,41 +1,18 @@
-import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './templates/Layout';
-import Home from './views/Home';
-import NoPage from './views/NoPage';
-import Cardapio from './views/Cardapio';
-import Login from './views/Login';
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        index: true, // Rota padrão para "/"
-        element: <Home />,
-      },
-      {
-        path: "cardapio",
-        element: <Cardapio />,
-      },
-      {
-        path: "login",
-        element: <Login />,
-      },
-      {
-        path: "*",
-        element: <NoPage />,
-      },
-    ],
-  },
-]);
-
-function App() {
+const App = () => {
   return (
-    <RouterProvider router={router} />
+    <div>
+      <Header />
+      <main>
+        <Outlet />  {/* Renderiza as rotas filhas aqui */}
+      </main>
+      <Footer />
+    </div>
   );
-}
-
+};
 
 export default App;
