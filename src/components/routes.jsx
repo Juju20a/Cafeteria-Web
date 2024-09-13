@@ -13,16 +13,16 @@ const router = createBrowserRouter([
     element: <App />,  // Componente layout principal
     children: [
       {
-        path: '/',
+        index: true,
         element: <Home />,  // Página inicial
       },
       {
         path: 'cardapio',
-        element: <Cardapio />,  // Página Sobre
+        element: <Cardapio />,  // Página de cardapio
       },
       {
         path: 'login',
-        element: <Login />,  // Página de Contato
+        element: <Login />,  // Página de login
       },
       {
         path: '*',
