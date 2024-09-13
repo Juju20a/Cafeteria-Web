@@ -6,19 +6,36 @@ import NoPage from './views/NoPage';
 import Cardapio from './views/Cardapio';
 import Login from './views/Login';
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true, // Rota padrão para "/"
+        element: <Home />,
+      },
+      {
+        path: "cardapio",
+        element: <Cardapio />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "*",
+        element: <NoPage />,
+      },
+    ],
+  },
+]);
+
 function App() {
   return (
-    <CreateBrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="cardapio" element={<Cardapio />} />
-          <Route path="login" element={<Login />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </CreateBrowserRouter>
+    <RouterProvider router={router} />
   );
 }
+
 
 export default App;
