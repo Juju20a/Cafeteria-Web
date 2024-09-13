@@ -2,9 +2,9 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import Home from './pages/Home';
-import About from './pages/Cardapio';
-import Contact from './pages/Login';
-import NotFound from './pages/NotPage';
+import Cardapio from './pages/Cardapio';
+import Login from './pages/Login';
+import NotPage from './pages/NotPage';
 
 // Crie o roteador com as rotas
 const router = createBrowserRouter([
@@ -17,11 +17,11 @@ const router = createBrowserRouter([
         element: <Home />,  // Página inicial
       },
       {
-        path: 'about',
-        element: <//Cardapio />,  // Página Sobre
+        path: 'cardapio',
+        element: <Cardapio />,  // Página Sobre
       },
       {
-        path: 'contact',
+        path: 'login',
         element: <Login />,  // Página de Contato
       },
       {
