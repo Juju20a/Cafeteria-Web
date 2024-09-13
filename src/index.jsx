@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Router from './routes';
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
 // Renderiza o aplicativo
-ReactDOM.render(
-  React.createElement(Router),
-  document.getElementById('root')
+root.render(
+  <React.StrictMode>
+    <Router />
+  </React.StrictMode>
 );
 
